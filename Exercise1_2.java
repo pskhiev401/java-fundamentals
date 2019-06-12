@@ -2,22 +2,24 @@
 // Name: Patric Khiev
 // Date: 6/12/19
 // Assignment: Exercise 1.2
-// 1 hour = 3600s
-// 1 min = 60s
+
+// 1 hour = 3600s or input/60/60
+// 1 min = 60s or (input/60)%60
+// remaning secs = input%60
 
 import java.util.Scanner;
 
 public class Exercise1_2 {
   public static void main(String[] args) {
-    Scanner SecondsInput = new Scanner(System.in);
-    int input;
-    hour, min, sec = 0;
-    System.out.print("Enter Seconds: ");
-    input = SecondsInput.nextInt();
-    // for-loop 
-    // each time seconds greater than 3600, subtract 3600, 1+ to hours
-    // if less than 3600 && greater than 60, subtract 60, 1+ to seconds
-    // if less than 60, return sec
-    // System.out.println(" ")
+    Scanner UserInput = new Scanner(System.in); // UserInput is an object of the Scanner class
+    int input; // initializing input at integer
+    System.out.print("Enter Seconds: "); // prompt for user to enter # seconds for conversion
+    input = UserInput.nextInt(); // assigning userinput to input variable
+    int sec = input % 60; // finding how many seconds, mins, hours
+    int min = (input / 60) % 60;
+    int hour = (input / 60) / 60;
+    System.out.println("Hours= " + hour); // displaying hours, mins, seconds
+    System.out.println("Minutes= " + min);
+    System.out.println("Seconds= " + sec);
   }
 }
