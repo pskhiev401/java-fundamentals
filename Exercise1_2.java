@@ -1,7 +1,7 @@
 
 // Name: Patric Khiev
 // Date: 6/12/19
-// Assignment: Exercise 1.2
+// Assignment: Exercise 1.2.1
 
 // 1 hour = 3600s or input/60/60
 // 1 min = 60s or (input/60)%60
