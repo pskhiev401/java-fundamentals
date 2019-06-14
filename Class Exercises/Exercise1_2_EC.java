@@ -17,8 +17,12 @@ import java.util.Scanner;
 
 public class Exercise1_2_EC {
   public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
+    Scanner keyboard = new Scanner(System.in);
     System.out.print("Enter Dollar amount: ");
+    float total = keyboard.nextFloat();
+    // Ten Dollar Bills
+    float tens = (total % 10);
+    System.out.println("$10 Bills: " + tens);
 
   }
 }
