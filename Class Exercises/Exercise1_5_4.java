@@ -14,10 +14,14 @@ public class Exercise1_5_4 {
     Scanner input = new Scanner(System.in);
     System.out.println("Enter a number");
     int userInput = input.nextInt();
-    if (userInput % 2 == 0) {
+    if (userInput == 0) {
+      System.out.println("You entered zero, silly goose!");
+    } else if (userInput < 0) {
+      System.out.println("You entered a negative number");
+    } else if (userInput % 2 == 0) {
       System.out.println("You entered an even number");
     } else {
-      System.out.println("You entered an even odd");
+      System.out.println("You entered an odd number");
     }
   }
 }
