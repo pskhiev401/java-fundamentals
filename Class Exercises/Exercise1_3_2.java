@@ -10,20 +10,20 @@ public class Exercise1_3_2 {
     Scanner keyboard = new Scanner(System.in);
     String s1 = "Hello John";
     String s2 = "hello john";
-    // String s3 = "Hello John";
-    // String s4 = "Hello john";
-    // String s5 = "Hello John";
-    // String s6 = "Hello john";
-    // System.out.println(s1.toUpperCase());
-    // System.out.println(s2.toUpperCase());
-    // System.out.println(s3.toUpperCase());
-    // System.out.println(s4.toUpperCase());
-    // System.out.println(s5.toUpperCase());
-    // System.out.println(s6.toUpperCase());
-    // Expected: "HELLO JOHN" x6
+    String s3 = "Hello John";
+    String s4 = "Hello john";
+    String s5 = "Hello John";
+    String s6 = "Hello john";
+
     s1 = s1.toUpperCase();
     s2 = s2.toUpperCase();
-    System.out.println(s1); // Expected: HELLO JOHN
-    System.out.println(s2); // Expected: HELLO JOHN
+    s3 = s3.toUpperCase();
+    s4 = s4.toUpperCase();
+    s5 = s5.toUpperCase();
+    s6 = s6.toUpperCase();
+
+    System.out.println(s1.equals(s2)); // Expected: True
+    System.out.println(s3.equals(s4)); // Expected: True
+    System.out.println(s5.equals(s6)); // Expected: True
   }
 }
