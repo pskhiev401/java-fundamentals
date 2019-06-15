@@ -19,9 +19,9 @@ public class Exercise1_2_EC {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in);
     System.out.print("Enter Dollar amount: ");
-    double total = keyboard.nextFloat();
+    double userInput = keyboard.nextDouble();
     // Ten Dollar Bills
-    double tens = (total / 10);
+    double tens = (userInput / 10);
     System.out.println("$10 Bills: " + tens);
 
   }
