@@ -17,13 +17,14 @@ public class Exercise1_6_2 {
     Scanner converter = new Scanner(System.in);
     System.out.println("Input degrees in Farenheit");
     float tempInput = converter.nextFloat();
+    System.out.println(tempInput);
     if (tempInput <= 32) {
       System.out.println("Water at that temperature is a solid");
     } else if (tempInput < 212 && tempInput > 32) {
       System.out.println("Water at that temperature is a liquid");
-    } else if (tempInput >= 212) {
+    } else {
       System.out.println("Water at that temperature is a gas");
     }
-    System.out.println("Degree in Celsius: " + (tempInput - 32) * (5 / 9));
+    System.out.println("Degrees in Celsius: " + ((tempInput - 32) / (1.8)));
   }
 }
