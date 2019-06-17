@@ -31,7 +31,7 @@ public class Exercise1_6_1 {
       System.out.println("Amount of Rupees to convert: ");
     } else if (selectedCurrency.equals("b")) {
       System.out.println("Amount of Bitcoin to convert: ");
-    } 
+    }
     // Currency conversion logic
     float currencyAmt = converter.nextFloat();
     if (selectedCurrency.equals("e")) {
