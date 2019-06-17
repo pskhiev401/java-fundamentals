@@ -33,17 +33,17 @@ public class Exercise1_6_3 {
       System.out.println(); // between 1 and 3
     } else if (userAge > 1 && userAge <= 3) {
       System.out.printf("This person’s age category: %s%n", todd);
-      System.out.println(); // between 3 and 13
-    } else if (userAge > 3 && userAge <= 13) {
+      System.out.println();
+    } else if (userAge > 3 && userAge <= 13) { // between 3 and 13
       System.out.printf("This person’s age category: %s%n", chld);
       System.out.println();
-    } else if (userAge > 13 && userAge <= 18) {
+    } else if (userAge > 13 && userAge <= 18) { // between 13 and 18
       System.out.printf("This person’s age category: %s%n", teen);
       System.out.println();
-    } else if (userAge > 18 && userAge <= 65) {
+    } else if (userAge > 18 && userAge <= 65) { // between 18 and 65
       System.out.printf("This person’s age category: %s%n", adlt);
       System.out.println();
-    } else if (userAge > 65) {
+    } else if (userAge > 65) { // over 65
       System.out.printf("This person’s age category: %s%n", sen);
       System.out.println();
     }
