@@ -18,6 +18,7 @@ import java.util.Scanner;
 public class Exercise1_6_1 {
   public static void main(String[] args) {
     Scanner converter = new Scanner(System.in);
+    // Prompt user for type of currency, and how much
     System.out.printf(
         "Which currency would you like to convert to USD? %ne = Euros, c = Chinese Yuan, r = Indian Rupees, b = Bitcoin: ");
     String selectedCurrency = converter.next();
@@ -30,11 +31,17 @@ public class Exercise1_6_1 {
       System.out.println("Amount of Rupees to convert: ");
     } else if (selectedCurrency.equals("b")) {
       System.out.println("Amount of Bitcoin to convert: ");
+    } 
+    // Currency conversion logic
+    float currencyAmt = converter.nextFloat();
+    if (selectedCurrency.equals("e")) {
+      System.out.println("In U.S. dollars, that is " + currencyAmt * 1.16);
+    } else if (selectedCurrency.equals("c")) {
+      System.out.println("In U.S. dollars, that is " + currencyAmt * 0.15);
+    } else if (selectedCurrency.equals("r")) {
+      System.out.println("In U.S. dollars, that is " + currencyAmt * 0.015);
+    } else if (selectedCurrency.equals("b")) {
+      System.out.println("In U.S. dollars, that is " + currencyAmt * (1 / 6923.80));
     }
-    // float currencyAmt = converter.nextFloat();
-    // System.out.println(currencyAmt);
-    // if (selectedCurrency == "e") {
-    // System.out.println("Amount ");
-    // }
   }
 }
