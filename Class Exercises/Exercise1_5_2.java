@@ -15,6 +15,7 @@ public class Exercise1_5_2 {
     String firstName = input.next();
     System.out.println("Enter another name?");
     String secondName = input.next();
+    
     if (firstName.compareTo(secondName) < 0) {
       System.out.println(firstName + ", " + secondName + ".");
     } else if (firstName.compareTo(secondName) > 0) {
