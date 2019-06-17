@@ -18,7 +18,23 @@ import java.util.Scanner;
 public class Exercise1_6_1 {
   public static void main(String[] args) {
     Scanner converter = new Scanner(System.in);
-    System.out.println("Currency to convert to U.S. dollars: e = Euros, c= Chinese Yuan, r = Indian Rupees, b = Bitcoin: ");
-    float usDollar = converter.nextFloat();
+    System.out.printf(
+        "Which currency would you like to convert to USD? %ne = Euros, c = Chinese Yuan, r = Indian Rupees, b = Bitcoin: ");
+    String selectedCurrency = converter.next();
+    System.out.println(selectedCurrency);
+    if (selectedCurrency.equals("e")) { // in java we need to use the .equals(), versus using ==
+      System.out.println("Amount of Euros to convert: ");
+    } else if (selectedCurrency.equals("c")) {
+      System.out.println("Amount of Yuan to convert: ");
+    } else if (selectedCurrency.equals("r")) {
+      System.out.println("Amount of Rupees to convert: ");
+    } else if (selectedCurrency.equals("b")) {
+      System.out.println("Amount of Bitcoin to convert: ");
+    }
+    // float currencyAmt = converter.nextFloat();
+    // System.out.println(currencyAmt);
+    // if (selectedCurrency == "e") {
+    // System.out.println("Amount ");
+    // }
   }
 }
