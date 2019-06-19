@@ -31,39 +31,39 @@ public class Assignment1_1 {
 
     switch (cabinClass) {
 
-    case 1:
-      if (tripMiles <= 100) {
+    case 1: // First Class
+      if (tripMiles <= 100) { // Trips less than or equal 100mi
         System.out.println(tripMiles * 3.0);
         break;
-      } else if (tripMiles > 100 && tripMiles <= 250) {
-        tripMiles -= 100;
-        float tier1 = 100;
-        float tier2 = tripMiles;
-        double tripCost = (tier1 * 3) + (tier2 * 2.5);
+      } else if (tripMiles > 100 && tripMiles <= 250) { // Trips between 100mi - 250mi
+        tripMiles -= 100; // removes 100 from tripMiles
+        float tier1 = 100; // intialized to 100 which was removed from tripMiles
+        float tier2 = tripMiles; // tier2 is set to the remainder
+        double tripCost = (tier1 * 3) + (tier2 * 2.5); // rates calculation
         System.out.println(tripCost);
         break;
-      } else if (tripMiles > 250) {
-        tripMiles -= 100;
-        float tier1 = 100;
-        tripMiles -= 150;
-        float tier2 = 150;
-        float tier3 = tripMiles;
-        double tripCost = (tier1 * 3) + (tier2 * 2.5) + (tier3 * 2);
+      } else if (tripMiles > 250) { // Trips greater than 250mi
+        tripMiles -= 100; // removes 100 from tripMiles
+        float tier1 = 100; // intialized to 100 which was removed from tripMiles
+        tripMiles -= 150; // removes 150 from tripmMiles
+        float tier2 = 150; // then added tier2
+        float tier3 = tripMiles; // tier3 is set to the remainder miles
+        double tripCost = (tier1 * 3) + (tier2 * 2.5) + (tier3 * 2); // rates calculation
         System.out.println(tripCost);
         break;
       }
-    case 2:
-      if (tripMiles <= 100) {
+    case 2: // Second Class
+      if (tripMiles <= 100) { // Trips less than or equal 100mi
         System.out.println(tripMiles * 2.5);
         break;
-      } else if (tripMiles > 100 && tripMiles <= 250) {
+      } else if (tripMiles > 100 && tripMiles <= 250) { // Trips between 100mi - 250mi
         tripMiles -= 100;
         float tier1 = 100;
         float tier2 = tripMiles;
         double tripCost = (tier1 * 2.5) + (tier2 * 1.5);
         System.out.println(tripCost);
         break;
-      } else if (tripMiles > 250) {
+      } else if (tripMiles > 250) {// Trips greater than 250mi
         tripMiles -= 100;
         float tier1 = 100;
         tripMiles -= 150;
@@ -73,18 +73,18 @@ public class Assignment1_1 {
         System.out.println(tripCost);
         break;
       }
-    case 3:
-      if (tripMiles <= 100) {
+    case 3: // Third Class
+      if (tripMiles <= 100) { // Trips less than or equal 100mi
         System.out.println(tripMiles * 2);
         break;
-      } else if (tripMiles > 100 && tripMiles <= 250) {
+      } else if (tripMiles > 100 && tripMiles <= 250) { // Trips between 100mi - 250mi
         tripMiles -= 100;
         float tier1 = 100;
         float tier2 = tripMiles;
         double tripCost = (tier1 * 2) + (tier2 * 1);
         System.out.println(tripCost);
         break;
-      } else if (tripMiles > 250) {
+      } else if (tripMiles > 250) { // Trips greater than 250mi
         tripMiles -= 100;
         float tier1 = 100;
         tripMiles -= 150;
@@ -95,7 +95,7 @@ public class Assignment1_1 {
         break;
       }
     default:
-      System.out.println("Error, invalid input");
+      System.out.println("Error, invalid input"); // Error for non-defined inputs
     }
     System.out.println("End of Program");
   }
