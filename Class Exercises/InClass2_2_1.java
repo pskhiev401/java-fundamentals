@@ -10,7 +10,8 @@ Write a menu driven program which uses a method for each of the following operat
 4. Find 10 Multiples
 5. Odd/Even Digit Details
 6. Palindrome Test
-7. Exponent Evaluation
+7. Factorial Finder
+8. Exponent Evaluation
 
 The user should be allowed to repeat the operations as long as he wants to. Use appropriate number of parameters and return type for each method
 */
@@ -118,12 +119,18 @@ public class InClass2_2_1 {
 
   public static void primeNum(int number) {
     // prime numbers are not divisible by other numbers, but 1 and itself.
-    for (int i = 2; i < number; i++) { // intitalizing at 2, because 1 & 2 are prime
-      if (number % i == 0) { // if no remainder, number is not prime
-        System.out.println(number + " is a composite number.");
+    int num = number;
+    boolean primeCheck = false;
+    for (int i = 2; i <= num / 2; ++i) { // checking nonprime number
+      if (num % i == 0) {
+        primeCheck = true; // switches boolean value
       }
     }
-    System.out.println(number + " is a prime number.");
+    if (primeCheck) { // if true
+      System.out.println(num + " is not a prime number.");
+    } else { // if false
+      System.out.println(num + " is a prime number.");
+    }
   }
 
   public static void findNext10(int number) {
@@ -192,14 +199,13 @@ public class InClass2_2_1 {
       {
         symbol = "";
       }
-
       System.out.print(i + symbol);
     }
     System.out.println();
   }
 
-  public static void exponentEval(int base, int exp) {
-    int result = base;
+  public static void exponentEval(long base, long exp) {
+    long result = base;
     System.out.print(base + " to the power of " + exp + " is ");
     if (exp == 0) { // if exponent = 0, return 1
       result = 1;
